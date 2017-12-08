@@ -15,10 +15,12 @@ import { SettingOutTime } from '../pages/setting-out-time/setting-out-time';
 import { SettingHourlyWage } from '../pages/setting-hourly-wage/setting-hourly-wage';
 import { SettingIncome } from '../pages/setting-income/setting-income';
 import { SettingHoliday } from '../pages/setting-holiday/setting-holiday';
+import { CommuteTabs } from '../pages/commute-tabs/commute-tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { NgCalendarModule } from 'ionic2-calendar';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     CommuteMain, CommuteAvg, CommuteMinMax, CommuteOvertime, Setting, SettingGoTime, SettingOutTime,
-    SettingIncome, SettingHourlyWage, SettingHoliday
+    SettingIncome, SettingHourlyWage, SettingHoliday, CommuteTabs
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    NgCalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +41,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     CommuteMain, CommuteAvg, CommuteMinMax, CommuteOvertime, Setting, SettingGoTime, SettingOutTime,
-    SettingIncome, SettingHourlyWage, SettingHoliday
+    SettingIncome, SettingHourlyWage, SettingHoliday, CommuteTabs
   ],
   providers: [
     StatusBar,

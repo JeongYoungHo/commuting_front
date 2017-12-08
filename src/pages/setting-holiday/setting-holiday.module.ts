@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SettingHoliday } from './setting-holiday';
+import { NgCalendarModule } from 'ionic2-calendar';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { SettingHoliday } from './setting-holiday';
   ],
   imports: [
     IonicPageModule.forChild(SettingHoliday),
+    NgCalendarModule
   ],
 })
 export class SettingHolidayModule {}

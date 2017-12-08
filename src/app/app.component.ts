@@ -5,8 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { CommuteMain } from '../pages/commute-main/commute-main';
+// import { CommuteMain } from '../pages/commute-main/commute-main';
 import { Setting } from '../pages/setting/setting'
+import { CommuteTabs } from '../pages/commute-tabs/commute-tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,8 +25,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: '출퇴근시간조회', component: CommuteMain },
+      // { title: 'List', component: ListPage },
+      { title: '출퇴근시간조회', component: CommuteTabs },
       { title: '설정', component: Setting }
     ];
 
@@ -45,4 +46,9 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  // Tab 페이지 여는 부분에서 tabs page의 navbar가 있어야 back버튼이 나옴
+  // openPageWithBackBtn(page){
+  //   this.nav.push(page.component);
+  // }
 }

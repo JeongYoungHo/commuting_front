@@ -13,8 +13,14 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'commute-overtime.html',
 })
 export class CommuteOvertime {
+  calendar;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.calendar ={
+      mode: 'month',
+      currentDate: new Date(),
+      // locale: 'ko-KR'
+    }
   }
 
   ionViewDidLoad() {

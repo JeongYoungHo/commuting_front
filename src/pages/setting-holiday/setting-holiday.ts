@@ -12,12 +12,22 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class SettingHoliday {
   title : String;
+  calendar;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.title = navParams.data;
+    this.calendar ={
+      mode: 'month',
+      currentDate: new Date(),
+      // locale: 'ko-KR'
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingHoliday');
   }
 
+  onTimeSelected(event){ // 달력 날짜 선택시 호출
+    console.log(event.selectedTime);
+  }
 }
